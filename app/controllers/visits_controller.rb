@@ -100,7 +100,7 @@ class VisitsController < ApplicationController
     @day = date_from_params(params)
     @visits = Visit.for_organization(@organization).after(@day).before(@day.tomorrow)
     @groups = @visits.inject({:volunteers => [], :patrons => []}) do |groups, visit|
-      if visit.volunteer?
+      if visit.vtype=='Volunteering'
         groups[:volunteers] << visit
       else
         groups[:patrons] << visit

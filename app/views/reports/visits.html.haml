@@ -27,7 +27,7 @@
         %tr
           %th Name
           %th Type
-          %th Volunteer
+		  %th Volunteer
           %th Datetime
           %th Note
         -for visit in @visits
@@ -37,7 +37,7 @@
             %td
               = visit.person.staff? ? 'Staff' : 'Patron'
             %td
-              = visit.volunteer?
+              = visit.vtype=='Volunteering'?
             %td
               = datetime_long(visit.arrived_at)
             %td.note{:style => 'width:360px;'}

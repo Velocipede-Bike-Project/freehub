@@ -128,7 +128,8 @@ ActiveRecord::Schema.define(:version => 20100626223127) do
 
   create_table "visits", :force => true do |t|
     t.datetime "arrived_at"
-    t.boolean  "volunteer",     :default => false
+    t.string  "vtype",     :default => nil
+    t.boolean  "shopper",     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "created_by_id"

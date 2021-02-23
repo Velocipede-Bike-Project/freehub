@@ -2,9 +2,9 @@
   =labeled_input 'Datetime', :for => :visit_arrived_at do
     -capture do
       =calendar_date_select_tag "visit[arrived_at]", visit.arrived_at, :time => true, :year_range => 3.years.ago..0.years.from_now
-  =labeled_input 'Volunteer', :for => :visit_volunteer do
+  =labeled_input 'Volunteer', :for => :visit_vtype do
     -capture do
-      =form.check_box :volunteer
+      =form.text_field :vtype
   -fields_for :note, visit.note do |note|
     =labeled_input 'Note', :for => :visit_note do
       -capture do

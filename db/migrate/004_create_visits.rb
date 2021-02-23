@@ -2,8 +2,7 @@ class CreateVisits < ActiveRecord::Migration
   def self.up
     create_table :visits do |t|
       t.datetime :datetime, :nil => false
-      t.boolean :volunteer, :nil => false, :default => false
-
+      t.string :vtype, :nil => true
       t.timestamps
       t.references :created_by, :updated_by
       t.references :person, :nil => false

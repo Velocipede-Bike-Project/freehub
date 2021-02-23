@@ -6,7 +6,7 @@
     = ' : Detail'
   %ul
     =labeled_value 'Datetime', datetime_long(@visit.arrived_at)
-    =labeled_value 'Volunteer', @visit.volunteer?
+    =labeled_value 'Volunteering', @visit.vtype?
     =labeled_value 'Note', note_text(@visit.note)
     =labeled_value 'Person', @visit.person.full_name
     -userstamp_labeled_values @visit

@@ -4,7 +4,7 @@
 #
 #  id            :integer(4)      not null, primary key
 #  arrived_at    :datetime
-#  volunteer     :boolean(1)      default(FALSE)
+#  type     :string(20)      default(null)
 #  created_at    :datetime
 #  updated_at    :datetime
 #  created_by_id :integer(4)
@@ -44,7 +44,7 @@ class Visit < ActiveRecord::Base
   def initialize(params={})
     super
     self.arrived_at ||= Time.now
-    self.volunteer ||= false
+    self.vtype ||= ''
     self.note ||= Note.new
   end
 
