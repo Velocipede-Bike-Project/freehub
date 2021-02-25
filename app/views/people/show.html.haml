@@ -26,7 +26,7 @@
         %label.inline{:for => 'visit_vtype_Visiting'} Visiting
         = f.radio_button(:vtype, 'Volunteering')
         %label.inline{:for => 'visit_vtype_Volunteering'} Volunteering
-        = f.radio_button(:vtype, false)
+        = f.radio_button(:vtype, 'Shopping')
         %label.inline{:for => 'visit_vtype_Shopping'} Shopping
       %li
         -fields_for :note do |note|
